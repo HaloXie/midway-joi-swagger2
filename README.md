@@ -15,10 +15,13 @@ https://github.com/Cody2333/egg-swagger-decorator
 
 1. app.ts 绑定 swagger 初始化配置（auth）
 2. 访问地址 [根目录]/swagger-html
-3. /interface/:api
-4. /unittest/:api
-5. api='controllerName'
-6. summary='actionName'
+
+ [:api] ='controllerName'
+3. /interface/[:api] => use for generting the Interface file according to the joi schema
+4. /unittest/[:api] 
+=> use for generting the unittest file according to the controller funcions which the function atrrbutes constains summay tag
+
+5. summary='actionName'
 
 ```app.ts
 import { wrapper } from 'midway-joi-swagger2';
